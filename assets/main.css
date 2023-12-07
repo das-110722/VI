@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+}
+
+body > div {
+  margin: 5% auto 0;
+  max-width: 720px;
+  background: url(./img/vi.jpg);
+}
+
+.tabs {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.tabs .line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  border-radius: 15px;
+  background-color: rgb(131, 7, 120), 53, 147;
+  transition: all 0.2s ease;
+}
+.tab-item {
+  min-width: 80px;
+  padding: 16px 20px 11px 20px;
+  font-size: 16px;
+  text-align: center;
+  color: rgb(122, 8, 133);
+  background-color: #000;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 5px solid transparent;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.tab-icon {
+  font-size: 24px;
+  width: 32px;
+  position: relative;
+  top: 2px;
+}
+.tab-item:hover {
+  background-color: #7e7e7e;
+  border-color: rgba(194, 53, 100, 0.1);
+}
+.tab-item.active {
+  opacity: 1;
+}
+.tab-content {
+  padding: 28px 0;
+}
+.tab-pane {
+  color: #fcfcfc;
+  display: none;    
+  min-height: 100px;
+  padding: 32px 24px;
+  text-align: center;
+  border-radius: 2px;
+  background: linear-gradient(#212121, #212121) padding-box,
+            linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  margin: 24px;
+  align-self: center;
+  box-shadow: 0 2px 5px 0 rgba(51, 62, 73, 0.1);
+  background-size: 200% 100%;
+  animation: gradient 5s ease infinite;
+}
+.tab-pane > h2 {
+    color: blueviolet;
+    text-shadow: 0 0 9px yellow;
+}
+
+.tab-pane > p {
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.tab-pane.active {
+  display: block;
+}
+.tab-pane h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
